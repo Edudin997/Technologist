@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#28a428"
+        android:orientation="vertical"
+        android:layout_marginBottom="20sp">
+
+        <TextView
+            android:id="@+id/username_logged"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Технолог"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:gravity="left"/>
+
+        <Button
+            android:id="@+id/logout"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="58dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:drawableEnd="@drawable/ic_logout"
+            android:drawableTint="#FFF"
+            android:paddingTop="6dp"
+            android:textSize="16dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/material_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15sp"
+        android:layout_marginBottom="8sp"
+        android:hint="Материал">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/material"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/periodicity_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15sp"
+        android:layout_marginBottom="8sp"
+        android:hint="Частота">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/periodicity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/power_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15sp"
+        android:layout_marginBottom="10sp"
+        android:hint="Мощность">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/to_send"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:text="Отправить" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15sp"
+        android:text="Ответ"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        android:textColor="#ff0000"
+        />
+
+    <TextView
+        android:id="@+id/title_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="15dp"
+        android:text="Заголовок"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/body_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_marginHorizontal="15dp"
+        android:text="Сообщение"
+        android:textSize="16dp"
+        android:visibility="invisible"
+        android:textColor="#666666"
+        />
+
+</LinearLayout>

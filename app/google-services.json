@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "186887686766",
+    "project_id": "technologist-42905",
+    "storage_bucket": "technologist-42905.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186887686766:android:98a6ba51ece4a58253747f",
+        "android_client_info": {
+          "package_name": "com.example.technologist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186887686766-v9rla5eflb054o6kjufdsl6mc7rrvinc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-18_dX7I_cExinla-KD9hv4FyVx6gdFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186887686766-v9rla5eflb054o6kjufdsl6mc7rrvinc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
