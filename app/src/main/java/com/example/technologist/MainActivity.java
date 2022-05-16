@@ -28,12 +28,11 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     // Переменные
-    MyFirebaseMessagingService database;
     ProgressDialog progressDialog;
     TextView username_logged, answer, title_message, body_message;
     TextInputEditText material, periodicity, power;
     Button logout, to_send;
-    String url_logout, url_parameters, username, str_material, str_periodicity, str_power, test;
+    String url_logout, url_parameters, username, str_material, str_periodicity, str_power;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
     Toolbar toolbar;
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        registerReceiver(receiver,new IntentFilter("com.push.message.received"));
+        registerReceiver(receiver,new IntentFilter("push_message"));
 
         // Присвоение значений переменным
         setSupportActionBar(toolbar);
@@ -98,9 +97,6 @@ public class MainActivity extends AppCompatActivity {
             requestQueue.add(parameters);
             answer.setText("Ожидаем ответ оператора");
             answer.setTextColor(Color.parseColor("#FF0000"));
-            answer.setVisibility(answer.VISIBLE);
-            title_message.setVisibility(title_message.INVISIBLE);
-            body_message.setVisibility(body_message.INVISIBLE);
         });
     }
     // Клик на кнопку "Отправить"
@@ -121,9 +117,7 @@ public class MainActivity extends AppCompatActivity {
             answer.setText(answer_message);
             answer.setTextColor(Color.parseColor("#008000"));
             title_message.setText(title);
-            title_message.setVisibility(title_message.VISIBLE);
             body_message.setText(body);
-            body_message.setVisibility(body_message.VISIBLE);
         }
     };
 

@@ -35,11 +35,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // message, here is where that should be initiated. See sendNotification method below.
         sendMessage(remoteMessage.getFrom(), remoteMessage.getNotification().getBody());
         sendNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
-        Intent intent = new Intent("com.push.message.received");
-        intent.putExtra("answer_message", "Ответ получен");
-        intent.putExtra("title", remoteMessage.getNotification().getTitle());
-        intent.putExtra("body", remoteMessage.getNotification().getBody());
-        sendBroadcast(intent);
     }
 
     private void sendMessage(String from, String body) {
@@ -66,8 +61,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         .setContentTitle(title)
                         .setContentText(messageBody)
                         .setAutoCancel(true)
-                        .setSound(defaultSoundUri)
-                        .setContentIntent(pendingIntent);
+                        .setSound(defaultSoundUri);
+                        //.setContentIntent(pendingIntent);
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -81,5 +76,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }
 
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build());
+
+        Intent push = new Intent("push_message");
+        push.putExtra("answer_message", "Ответ получен");
+        push.putExtra("title", title);
+        push.putExtra("body", messageBody);
+        sendBroadcast(push);
     }
 }

@@ -94,9 +94,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15sp"
-        android:text="Ответ"
+        android:text=""
         android:textSize="16dp"
-        android:visibility="invisible"
         android:textColor="#ff0000"
         />
 
@@ -106,9 +105,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30sp"
         android:layout_marginHorizontal="15dp"
-        android:text="Заголовок"
+        android:text=""
         android:textSize="16dp"
-        android:visibility="invisible"
         android:textColor="#000000"
         />
 
@@ -118,9 +116,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:layout_marginHorizontal="15dp"
-        android:text="Сообщение"
+        android:text=""
         android:textSize="16dp"
-        android:visibility="invisible"
         android:textColor="#666666"
         />
 
