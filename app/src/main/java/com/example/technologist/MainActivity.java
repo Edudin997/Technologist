@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     TextView username_logged, answer, title_message, body_message;
     TextInputEditText material, periodicity, power;
     Button logout, to_send;
-    String url_logout, url_parameters, username, str_material, str_periodicity, str_power;
+    String url_logout, url_parameters, username, token, str_material, str_periodicity, str_power;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
     Toolbar toolbar;
@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Присвоение значений переменным
         setSupportActionBar(toolbar);
-        url_logout = "https://eddfit.ru/soldering/logout.php";
-        url_parameters = "https://eddfit.ru/soldering/parameters.php";
         username_logged = findViewById(R.id.username_logged);
         answer = findViewById(R.id.answer);
         title_message = findViewById(R.id.title_message);
@@ -60,7 +58,10 @@ public class MainActivity extends AppCompatActivity {
         to_send = findViewById(R.id.to_send);
         preferences = getSharedPreferences("SHARED_PREF", MODE_PRIVATE);
         username = preferences.getString("USERNAME", "");
+        token = preferences.getString("TOKEN", "");
         username_logged.setText(username);
+        url_logout = "https://eddfit.ru/soldering/logout.php?token=" + token;
+        url_parameters = "https://eddfit.ru/soldering/parameters.php?token=" + token;
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Загрузка...");
         // Присвоение значений переменным

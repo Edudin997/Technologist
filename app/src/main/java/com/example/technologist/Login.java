@@ -87,6 +87,7 @@ public class Login extends AppCompatActivity {
                 if (response.equalsIgnoreCase("Успешно")){
                     isLogin = true;
                     editor.putString("USERNAME", str_username);
+                    editor.putString("TOKEN", str_token);
                     editor.putBoolean("LOGGED", isLogin);
                     editor.apply();
                     session();
