@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             session();
         });
         // Клик на кнопку "Выход"
-
+        // Тест
         // Клик на кнопку "Отправить"
         to_send.setOnClickListener(view -> {
             progressDialog.show();

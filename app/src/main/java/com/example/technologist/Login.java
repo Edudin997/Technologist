@@ -76,7 +76,7 @@ public class Login extends AppCompatActivity {
             finish();
         }
         // Проверка сессии
-        // Тест 2
+        // Тест
         // Клик на кнопку "Войти"
         login.setOnClickListener(v -> {
             progressDialog.show();
